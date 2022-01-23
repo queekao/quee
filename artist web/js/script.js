@@ -50,7 +50,7 @@ const appendForm = () => {
     jumbotron.remove();
     parallax.remove();
     form.insertAdjacentHTML("afterbegin", htmlForm);
-    const data = JSON.parse(localStorage.getItem("form"));
+    const data = localStorage.getItem("form");
     form.innerHTML = data;
   }
 };
@@ -81,6 +81,7 @@ const appendJumbotron = () => {
     document.querySelector("body").prepend(parallax);
     landingPage.insertAdjacentHTML("afterbegin", htmlJumbotron);
     console.log("if success");
+    localStorage.removeItem("form");
   }
 };
 const parallaxScroll = () => {
@@ -88,7 +89,7 @@ const parallaxScroll = () => {
   parallax.style.backgroundPositionY = offset * 0.7 + "px";
   console.log("scroll");
 };
+//Callback
 joinBtn.addEventListener("click", appendForm);
 mainItem.addEventListener("click", appendJumbotron);
-console.log(mainItem);
 window.addEventListener("scroll", parallaxScroll);
