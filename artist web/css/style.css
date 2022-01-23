@@ -79,7 +79,7 @@ nav {
 .navbar-nav li::after {
   content: "";
   position: absolute;
-  bottom: -90%;
+  bottom: -75%;
   left: 9%;
   height: 4px;
   width: 100%;
