@@ -4,8 +4,6 @@ const form = document.querySelector(".form");
 const mainItem = document.querySelector(".main-item");
 const joinBtn = document.querySelector(".btn-outline-primary");
 const parallax = document.querySelector(".background-image");
-// const localJumbotron = localStorage.setItem("jumbotron", "2");
-// const localForm = localStorage.setItem("form", "1");
 console.log(form.innerHTML);
 const appendForm = () => {
   const htmlForm = `<form class="form-element animation">
@@ -47,13 +45,13 @@ const appendForm = () => {
 </form>`;
   const jumbotron = document.querySelector(".jumbotron");
   console.log(form.innerHTML === "");
-  localStorage.setItem("form", JSON.stringify(form));
+  localStorage.setItem("form", htmlForm);
   if (form.innerHTML === "") {
     jumbotron.remove();
     parallax.remove();
     form.insertAdjacentHTML("afterbegin", htmlForm);
-    const data = localStorage.getItem("form");
-    console.log(data);
+    const data = JSON.parse(localStorage.getItem("form"));
+    form.innerHTML = data;
   }
 };
 const appendJumbotron = () => {
