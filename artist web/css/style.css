@@ -43,10 +43,10 @@ nav {
     align-items: flex-end;
 }
 .navbar-brand p{
- font-size: 3rem;
+ font-size: 2.4rem;
  font-weight: 700;
  font-family:  'Helvetica';
- margin-bottom: 0.9rem;
+ margin-bottom: 1rem;
  margin-left: 1rem;
 }
 .navbar-nav {
@@ -88,8 +88,9 @@ nav {
   border-radius: 4px;
 }
 .navbar .navbar-toggler{
-    color: var(--white);
     background-color: var(--blue);
+    width: 4rem;
+    height: 3.5rem;
 }
 .navbar .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,256,256, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
