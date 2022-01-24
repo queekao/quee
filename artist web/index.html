@@ -18,96 +18,177 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;400;500;600&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,700;1,500&family=Playfair+Display:wght@400;500&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/style.css" />
     <title>Document</title>
   </head>
   <body>
-    <div class="background-image"></div>
-    <header class="shadow-sm bg-white rounded">
-      <div class="container">
-        <div class="row">
-          <nav class="navbar navbar-expand-lg navbar-light w-100">
-            <a class="navbar-brand" href="#">
-              <img src="img/logo.png" width="55" height="55" alt="logo" />
-              <p>NTMOFA</p>
+    <main>
+      <div class="background-image"></div>
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <div class="logo_content">
+          <!-- <div class="logo">
+            <i class="bx bxl-bootstrap"></i>
+            <div class="logo_name">CodingLab</div>
+          </div> -->
+          <a class="logo" href="javascript:void(0)">
+            <img src="img/logo.png" width="50" height="50" alt="logo" />
+            <p>NTMOFA</p>
+          </a>
+          <i class="bx bx-menu-alt-left" id="btn"></i>
+        </div>
+        <ul class="nav_list">
+          <li>
+            <a href="#">
+              <i class="bx bx-search"></i>
+              <input type="text" placeholder="Search" />
             </a>
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-toggle="collapse"
-              data-target="#navbarNavDropdown"
-              aria-controls="navbarNavDropdown"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon navbar-dark"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-              <ul class="navbar-nav">
-                <li class="nav-item active">
-                  <a class="nav-link main-item font-weight-normal" href="#"
-                    >首頁
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link font-weight-normal" href="#">特色</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link font-weight-normal" href="#">價格</a>
-                </li>
-                <li class="nav-items dropdown">
-                  <a
-                    class="nav-link dropdown-toggle font-weight-normal"
-                    href="#"
-                    id="navbarDropdownMenuLink"
-                    role="button"
-                    data-toggle="dropdown"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                  >
-                    瞭解更多
-                  </a>
-                  <div
-                    class="dropdown-menu shadow-sm"
-                    aria-labelledby="navbarDropdownMenuLink"
-                  >
-                    <a class="dropdown-item" href="#">快速預約</a>
-                    <a class="dropdown-item" href="#">線上專線</a>
-                    <a class="dropdown-item" href="#">立即訂購</a>
-                  </div>
-                </li>
-              </ul>
-              <div class="navbar-spacer"></div>
-              <button type="button" class="btn btn-outline-primary mt-1">
-                登入會員
+            <span class="tooltip">Search</span>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bx bx-user"></i>
+              <span class="links_name">User</span>
+            </a>
+            <span class="tooltip">User</span>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bx bx-chat"></i>
+              <span class="links_name">Messages</span>
+            </a>
+            <span class="tooltip">Messages</span>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bx bx-pie-chart"></i>
+              <span class="links_name">Analytics</span>
+            </a>
+            <span class="tooltip">Analytics</span>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bx bx-cart"></i>
+              <span class="links_name">Order</span>
+            </a>
+            <span class="tooltip">Order</span>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bx bx-heart"></i>
+              <span class="links_name">Saved</span>
+            </a>
+            <span class="tooltip">Saved</span>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bx bx-cog"></i>
+              <span class="links_name">Setting</span>
+            </a>
+            <span class="tooltip">Setting</span>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bx bx-grid-alt"></i>
+              <span class="links_name">Dashboard</span>
+            </a>
+            <span class="tooltip">Dashboard</span>
+          </li>
+        </ul>
+      </div>
+      <!-- NAVBAR -->
+      <div class="header shadow-sm rounded">
+        <div class="container">
+          <div class="row">
+            <nav class="navbar navbar-expand-lg navbar-light w-100">
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon navbar-dark"></span>
               </button>
-            </div>
-          </nav>
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                  <li class="nav-item active">
+                    <a class="nav-link main-item font-weight-normal" href="#"
+                      >首頁
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link font-weight-normal" href="#">特色</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link font-weight-normal" href="#">價格</a>
+                  </li>
+                  <li class="nav-items dropdown">
+                    <a
+                      class="nav-link dropdown-toggle font-weight-normal"
+                      href="#"
+                      id="navbarDropdownMenuLink"
+                      role="button"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      瞭解更多
+                    </a>
+                    <div
+                      class="dropdown-menu shadow-sm"
+                      aria-labelledby="navbarDropdownMenuLink"
+                    >
+                      <a class="dropdown-item" href="#">快速預約</a>
+                      <a class="dropdown-item" href="#">線上專線</a>
+                      <a class="dropdown-item" href="#">立即訂購</a>
+                    </div>
+                  </li>
+                  <button type="button" class="btn btn-outline-primary mt-1">
+                    登入會員
+                  </button>
+                </ul>
+              </div>
+            </nav>
+          </div>
         </div>
       </div>
-    </header>
-    <section class="landing-page">
-      <div class="jumbotron">
-        <div class="artist__wall">
-          <h1 class="display-4 font-weight-normal">國美藏品維護保存系統</h1>
-          <p class="lead font-weight-bolder">
-            我們擁有最專業的藝術作品，以及最棒的社課活動，如果想要加入社團請點選下方連結。
-          </p>
-          <hr class="my-4" />
-          <p class="context font-weight-bolder">
-            點選下方的連結，我們將會有最專業的人士給您最專業的意見！
-          </p>
-          <a
-            class="btn btn-primary btn-lg"
-            href="javascript:void(0)"
-            role="button"
-            >瞭解更多</a
-          >
+      <!-- main -->
+      <section class="landing-page">
+        <div class="jumbotron">
+          <div class="artist__wall">
+            <h1 class="display-4 font-weight-normal">國美藏品維護保存系統</h1>
+            <p class="lead font-weight-bolder">
+              我們擁有最專業的藝術作品，以及最棒的社課活動，如果想要加入社團請點選下方連結。
+            </p>
+            <hr class="my-4" />
+            <p class="context font-weight-bolder">
+              點選下方的連結，我們將會有最專業的人士給您最專業的意見！
+            </p>
+            <a
+              class="btn btn-primary btn-lg"
+              href="javascript:void(0)"
+              role="button"
+              >瞭解更多</a
+            >
+          </div>
         </div>
-      </div>
-    </section>
-    <section class="form"></section>
-
+      </section>
+      <section class="form"></section>
+    </main>
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

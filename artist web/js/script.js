@@ -5,11 +5,13 @@ const mainItem = document.querySelector(".main-item");
 const joinBtn = document.querySelector(".btn-outline-primary");
 const dropDownMenu = document.querySelector(".navbar-collapse");
 const parallax = document.querySelector(".background-image");
-console.log(form.innerHTML);
+const header = document.querySelector(".header");
+const toggler = document.querySelector(".navbar-toggler");
+// console.log(form.innerHTML);
 
 const appendForm = () => {
   const htmlForm = `<form class="form-element animation">
-<div class="form-background shadow-sm shadow p-3 bg-white rounded">
+<div class="form-background bg-white rounded">
   <div class="form-group">
     <label for="exampleInputEmail1">Email address</label>
     <input
@@ -19,9 +21,7 @@ const appendForm = () => {
       aria-describedby="emailHelp"
       placeholder="Enter email"
     />
-    <small id="emailHelp" class="form-text text-muted"
-      >We'll never share your email with anyone else.</small
-    >
+ 
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">Password</label>
@@ -33,6 +33,9 @@ const appendForm = () => {
     />
   </div>
   <div class="form-group form-check">
+  <small id="passwordHelp" class="form-text text-muted"
+  >Forget Password?</small
+>
     <input
       type="checkbox"
       class="form-check-input "
@@ -53,6 +56,7 @@ const appendForm = () => {
     form.insertAdjacentHTML("afterbegin", htmlForm);
     localStorage.setItem("form", 1);
     dropDownMenu.classList.remove("show");
+    if (screen.width < 768) header.classList.toggle("height");
   }
 };
 const appendJumbotron = () => {
@@ -79,11 +83,12 @@ const appendJumbotron = () => {
   console.log(formElement);
   if (landingPage.innerHTML.trim() === "") {
     formElement.remove();
-    document.querySelector("body").prepend(parallax);
+    document.querySelector("main").prepend(parallax);
     landingPage.insertAdjacentHTML("afterbegin", htmlJumbotron);
     console.log("if success");
     localStorage.removeItem("form");
     dropDownMenu.classList.remove("show");
+    if (screen.width < 768) header.classList.toggle("height");
   }
 };
 const parallaxScroll = () => {
@@ -95,4 +100,24 @@ const parallaxScroll = () => {
 joinBtn.addEventListener("click", appendForm);
 mainItem.addEventListener("click", appendJumbotron);
 window.addEventListener("scroll", parallaxScroll);
-// const data = localStorage.getItem("form");
+//Sidebar
+let btn = document.querySelector("#btn");
+let sidebar = document.querySelector(".sidebar");
+let searchBtn = document.querySelector(".bx-search");
+let toolTip = document.querySelectorAll(".tooltip");
+btn.onclick = function () {
+  sidebar.classList.toggle("active");
+  if (sidebar.classList.contains("active")) {
+    toolTip.forEach((el) => (el.style.display = "none"));
+  }
+  if (!sidebar.classList.contains("active")) {
+    toolTip.forEach((el) => (el.style.display = "block"));
+  }
+};
+searchBtn.onclick = function () {
+  sidebar.classList.toggle("active");
+};
+//Header
+toggler.onclick = function () {
+  header.classList.toggle("height");
+};
