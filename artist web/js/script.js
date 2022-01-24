@@ -56,7 +56,7 @@ const appendForm = () => {
     form.insertAdjacentHTML("afterbegin", htmlForm);
     localStorage.setItem("form", 1);
     dropDownMenu.classList.remove("show");
-    if (screen.width < 768) header.classList.toggle("height");
+    if (screen.width < 992) header.classList.toggle("height");
   }
 };
 const appendJumbotron = () => {
@@ -88,7 +88,7 @@ const appendJumbotron = () => {
     console.log("if success");
     localStorage.removeItem("form");
     dropDownMenu.classList.remove("show");
-    if (screen.width < 768) header.classList.toggle("height");
+    if (screen.width < 992) header.classList.toggle("height");
   }
 };
 const parallaxScroll = () => {
