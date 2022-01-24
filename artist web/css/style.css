@@ -36,7 +36,7 @@ header .container .row {
 }
 @media (max-width: 992px) {
   header .container .row {
-    padding: .5rem 4rem;
+    padding: .5rem 2rem;
   }
 }
 nav {
@@ -58,7 +58,7 @@ nav .navbar-nav {
   border-bottom: 2px solid transparent;
   width: 100%;
   height: 100%;
-  margin-left: 2rem !important;
+  margin-left: 0.5rem !important;
 }
 
 .navbar-nav a {
@@ -73,17 +73,31 @@ nav .navbar-nav {
   margin-left: 1rem;
 }
 @media (min-width: 992px) {
-  .navbar-nav li:hover::after {
+  .navbar-nav .nav-item:hover::after {
+    opacity: 1;
+  }
+  .navbar-nav .nav-items:hover::after {
     opacity: 1;
   }
 }
-.navbar-nav li::after {
+.navbar-nav .nav-item::after {
   content: "";
   position: absolute;
   bottom: -75%;
   left: 9%;
   height: 4px;
-  width: 100%;
+  width: 55%;
+  border-bottom: 4px solid var(--blue);
+  opacity: 0;
+  transition: all 0.3s;
+}
+.navbar-nav .nav-items::after {
+  content: "";
+  position: absolute;
+  bottom: -75%;
+  left: 9%;
+  height: 4px;
+  width: 110%;
   border-bottom: 4px solid var(--blue);
   opacity: 0;
   transition: all 0.3s;
@@ -117,9 +131,9 @@ nav .navbar-nav {
 .navbar-collapse button {
   border-radius: 0;
   width: 12rem;
-  font-size:1.8rem;
+  font-size:1.6rem;
   padding: 0.8rem;
-  margin-left: 2rem;
+  margin-left: 1.5rem;
   border-color: #267cd9"
 }
 @media (max-width: 768px) {
