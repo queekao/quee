@@ -36,7 +36,7 @@ header .container .row {
 }
 @media (max-width: 992px) {
   header .container .row {
-    padding: .5rem 5rem;
+    padding: .5rem 4rem;
   }
 }
 nav {
@@ -54,10 +54,11 @@ nav {
  margin-bottom: 1rem;
  margin-left: 1rem;
 }
-.navbar-nav {
+nav .navbar-nav {
   border-bottom: 2px solid transparent;
   width: 100%;
   height: 100%;
+  margin-left: 2rem !important;
 }
 
 .navbar-nav a {
@@ -69,7 +70,7 @@ nav {
 .navbar-nav li {
   width: 6rem;
   transition: all 0.3s;
-  margin-left: 2rem;
+  margin-left: 1rem;
 }
 @media (min-width: 992px) {
   .navbar-nav li:hover::after {
