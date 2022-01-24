@@ -83,6 +83,7 @@ const appendJumbotron = () => {
     landingPage.insertAdjacentHTML("afterbegin", htmlJumbotron);
     console.log("if success");
     localStorage.removeItem("form");
+    dropDownMenu.classList.remove("show");
   }
 };
 const parallaxScroll = () => {
