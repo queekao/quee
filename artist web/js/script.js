@@ -1,12 +1,14 @@
 "use strict";
 const landingPage = document.querySelector(".landing-page");
 const form = document.querySelector(".form");
+const main = document.querySelector("main");
 const mainItem = document.querySelector(".main-item");
 const joinBtn = document.querySelector(".btn-outline-primary");
 const dropDownMenu = document.querySelector(".navbar-collapse");
 const parallax = document.querySelector(".background-image");
 const header = document.querySelector(".header");
 const toggler = document.querySelector(".navbar-toggler");
+const dropDownSidebar = document.querySelector(".dropdown");
 // console.log(form.innerHTML);
 
 const appendForm = () => {
@@ -56,7 +58,7 @@ const appendForm = () => {
     form.insertAdjacentHTML("afterbegin", htmlForm);
     localStorage.setItem("form", 1);
     dropDownMenu.classList.remove("show");
-    if (screen.width < 992) header.classList.toggle("height");
+    header.classList.toggle("height");
   }
 };
 const appendJumbotron = () => {
@@ -83,14 +85,15 @@ const appendJumbotron = () => {
   console.log(formElement);
   if (landingPage.innerHTML.trim() === "") {
     formElement.remove();
-    document.querySelector("main").prepend(parallax);
+    main.prepend(parallax);
     landingPage.insertAdjacentHTML("afterbegin", htmlJumbotron);
     console.log("if success");
     localStorage.removeItem("form");
     dropDownMenu.classList.remove("show");
-    if (screen.width < 992) header.classList.toggle("height");
+    header.classList.toggle("height");
   }
 };
+console.log(window.pageXOffset);
 const parallaxScroll = () => {
   let offset = window.pageYOffset;
   parallax.style.backgroundPositionY = offset * 0.7 + "px";
@@ -107,6 +110,8 @@ let searchBtn = document.querySelector(".bx-search");
 let toolTip = document.querySelectorAll(".tooltip");
 btn.onclick = function () {
   sidebar.classList.toggle("active");
+  dropDownSidebar.classList.toggle("toggle");
+  main.classList.toggle("move");
   if (sidebar.classList.contains("active")) {
     toolTip.forEach((el) => (el.style.display = "none"));
   }

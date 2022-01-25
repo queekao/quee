@@ -33,80 +33,113 @@
     <title>Document</title>
   </head>
   <body>
-    <main>
-      <div class="background-image"></div>
-      <!-- Sidebar -->
-      <div class="sidebar">
-        <div class="logo_content">
-          <!-- <div class="logo">
-            <i class="bx bxl-bootstrap"></i>
-            <div class="logo_name">CodingLab</div>
-          </div> -->
-          <a class="logo" href="javascript:void(0)">
-            <img src="img/logo.png" width="50" height="50" alt="logo" />
-            <p>NTMOFA</p>
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="logo_content">
+        <!-- <div class="logo">
+          <i class="bx bxl-bootstrap"></i>
+          <div class="logo_name">CodingLab</div>
+        </div> -->
+        <a class="logo" href="javascript:void(0)">
+          <img src="img/logo.png" width="50" height="50" alt="logo" />
+          <p>NTMOFA</p>
+        </a>
+        <i class="bx bx-menu-alt-left" id="btn"></i>
+      </div>
+      <ul class="nav_list">
+        <li>
+          <a href="#">
+            <i class="bx bx-search"></i>
+            <input type="text" placeholder="Search" />
           </a>
-          <i class="bx bx-menu-alt-left" id="btn"></i>
-        </div>
-        <ul class="nav_list">
-          <li>
-            <a href="#">
-              <i class="bx bx-search"></i>
-              <input type="text" placeholder="Search" />
-            </a>
-            <!-- <span class="tooltip">Search</span> -->
-          </li>
-          <li>
-            <a href="#">
-              <i class="bx bx-user"></i>
-              <span class="links_name">User</span>
-            </a>
-            <!-- <span class="tooltip">User</span> -->
-          </li>
-          <li>
-            <a href="#">
-              <i class="bx bx-chat"></i>
-              <span class="links_name">Messages</span>
-            </a>
-            <!-- <span class="tooltip">Messages</span> -->
-          </li>
-          <li>
-            <a href="#">
-              <i class="bx bx-pie-chart"></i>
-              <span class="links_name">Analytics</span>
-            </a>
-            <!-- <span class="tooltip">Analytics</span> -->
-          </li>
-          <li>
-            <a href="#">
-              <i class="bx bx-cart"></i>
-              <span class="links_name">Order</span>
-            </a>
-            <!-- <span class="tooltip">Order</span> -->
-          </li>
-          <li>
+          <!-- <span class="tooltip">Search</span> -->
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-user"></i>
+            <span class="links_name">User</span>
+          </a>
+          <!-- <span class="tooltip">User</span> -->
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-chat"></i>
+            <span class="links_name">Messages</span>
+          </a>
+          <!-- <span class="tooltip">Messages</span> -->
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-pie-chart"></i>
+            <span class="links_name">Analytics</span>
+          </a>
+          <!-- <span class="tooltip">Analytics</span> -->
+        </li>
+        <!-- <li>
+          <a href="#">
+            <i class="bx bx-cart"></i>
+            <span class="links_name">Order</span>
+          </a>
+          <span class="tooltip">Order</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-heart"></i>
+            <span class="links_name">Saved</span>
+          </a>
+          <span class="tooltip">Saved</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-cog"></i>
+            <span class="links_name">Setting</span>
+          </a>
+          <span class="tooltip">Setting</span>
+        </li> -->
+        <li>
+          <a href="#">
+            <i class="bx bx-grid-alt"></i>
+            <span class="links_name">Dashboard</span>
+          </a>
+          <!-- <span class="tooltip">Dashboard</span> -->
+        </li>
+        <li class="dropdown">
+          <a
+            class="dropdown-toggle font-weight-normal"
+            href="#"
+            id="navbarDropdownMenuLink"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            <i class="bx bxs-chevron-down-circle"></i>
+
+            More Content
+          </a>
+
+          <div
+            class="dropdown-menu shadow-sm"
+            aria-labelledby="navbarDropdownMenuLink"
+          >
             <a href="#">
               <i class="bx bx-heart"></i>
               <span class="links_name">Saved</span>
             </a>
-            <!-- <span class="tooltip">Saved</span> -->
-          </li>
-          <li>
             <a href="#">
               <i class="bx bx-cog"></i>
               <span class="links_name">Setting</span>
             </a>
-            <!-- <span class="tooltip">Setting</span> -->
-          </li>
-          <li>
             <a href="#">
               <i class="bx bx-grid-alt"></i>
               <span class="links_name">Dashboard</span>
             </a>
-            <!-- <span class="tooltip">Dashboard</span> -->
-          </li>
-        </ul>
-      </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <main>
+      <div class="background-image"></div>
       <!-- NAVBAR -->
       <div class="header shadow-sm rounded">
         <div class="container">
