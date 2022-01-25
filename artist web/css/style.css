@@ -106,7 +106,7 @@ main.move{
     margin-top: 2.5rem;
   }
   .sidebar .logo_content .logo{
-    margin-top: 0rem;
+    margin-top: -1.1rem;
   }
 }
 .sidebar.active .logo_content .logo{
@@ -302,7 +302,7 @@ overflow: hidden;
 }
 @media (max-width: 576px) {
   .container {
-    padding-top: 2.5rem;
+    padding-top: 1.5rem;
     padding-left:0;
     padding-right: 2rem;
   }
