@@ -323,7 +323,8 @@ overflow: hidden;
 
 @media (max-width: 992px) {
   .header .container .row {
-    padding: .5rem 2rem;
+    padding: 0rem 2rem;
+    margin-bottom: 1rem;
   }
   .header {
     position: fixed;

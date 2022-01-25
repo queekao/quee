@@ -119,9 +119,9 @@ btn.onclick = function () {
     toolTip.forEach((el) => (el.style.display = "block"));
   }
 };
-searchBtn.onclick = function () {
-  sidebar.classList.toggle("active");
-};
+// searchBtn.onclick = function () {
+//   dropDownSidebar.classList.toggle("toggle");
+// };
 //Header
 toggler.onclick = function () {
   header.classList.toggle("height");
