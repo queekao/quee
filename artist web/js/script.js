@@ -126,58 +126,74 @@ const appendJumbotron = () => {
 //INSERT FORM/////////
 const appendSearchForm = () => {
   const htmlSearch = `<div class="search__form-inner animation">
-  <h1 class="mb-3">What you are looking for?</h1>
-  <div class="input-group input-group-all">
-    <div class="input-group mb-3">
-      <div class="input-group input-group__input">
-        <div class="input-group-prepend">
-          <button
-            class="btn btn-outline-secondary dropdown-toggle"
-            type="button"
-            data-toggle="dropdown"
-            aria-haspopup="true"
-            aria-expanded="false"
-          >
-            Select type
-          </button>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Arstist</a>
-            <a class="dropdown-item" href="#">Music</a>
-            <a class="dropdown-item" href="#">Something else here</a>
-            <div role="separator" class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Need help?</a>
-          </div>
-        </div>
-        <input
-          type="text"
-          class="form-control"
-          aria-label="Text input with dropdown button"
-        />
-      </div>
-    </div>
-    <label for="basic-url">Search for URL</label>
-    <div class="input-group input-group__input mb-3">
+  <form class="form-inline">
+    <input
+      class="form-control"
+      type="search"
+      placeholder="Search"
+      aria-label="Search"
+    />
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+      Search
+    </button>
+  </form>
+  <p>No Content</p>
+  <div class="input-group__select mb-3">
+    <div class="input-group">
       <div class="input-group-prepend">
-        <span class="input-group-text" id="basic-addon3">https</span>
+        <button
+          class="btn btn-outline-secondary dropdown-toggle"
+          type="button"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          Select type
+        </button>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Arstist</a>
+          <a class="dropdown-item" href="#">Music</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+          <div role="separator" class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Need help?</a>
+        </div>
       </div>
-      <input
-        type="text"
-        class="form-control"
-        id="basic-url"
-        aria-describedby="basic-addon3"
-      />
-    </div>
-    <div class="input-group__last">
-      <div class="input-group-prepend input-date">
-        <label for="birthday">Choose the Date</label>
-        <input type="date" id="birthday" name="birthday" />
+      <div class="input-group-prepend">
+        <button
+          class="btn btn-outline-secondary dropdown-toggle"
+          type="button"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          Select type
+        </button>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Arstist</a>
+          <a class="dropdown-item" href="#">Music</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+          <div role="separator" class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Need help?</a>
+        </div>
       </div>
-      <a
-        class="btn btn-success btn-lg mt-3 btn-search"
-        href="javascript:void(0)"
-        role="button"
-        >Search</a
-      >
+      <div class="input-group-prepend">
+        <button
+          class="btn btn-outline-secondary dropdown-toggle"
+          type="button"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          Select type
+        </button>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Arstist</a>
+          <a class="dropdown-item" href="#">Music</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+          <div role="separator" class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Need help?</a>
+        </div>
+      </div>
     </div>
   </div>
 </div>`;
@@ -211,6 +227,7 @@ const parallaxScroll = () => {
   let offset = window.pageYOffset;
   parallax.style.backgroundPositionY = offset * 0.7 + "px";
   console.log("scroll");
+  parallax.style.transition = "none";
 };
 //Callback
 joinBtn.addEventListener("click", appendForm);
@@ -222,10 +239,19 @@ let btn = document.querySelector("#btn");
 let sidebar = document.querySelector(".sidebar");
 // let searchBtn = document.querySelector(".bx-search");
 let toolTip = document.querySelectorAll(".tooltip");
+bgImg.classList.toggle("move");
+if (screen.width < 992) {
+  sidebar.classList.remove("active");
+}
+if (screen.width > 992) {
+  bgImg.classList.add("move");
+}
+
 btn.onclick = function () {
   sidebar.classList.toggle("active");
   dropDownSidebar.classList.toggle("toggle");
   bgImg.classList.toggle("move");
+  parallax.style.transition = "all 0.3s";
   //   if (sidebar.classList.contains("active")) {
   //     toolTip.forEach((el) => (el.style.display = "none"));
   //   }

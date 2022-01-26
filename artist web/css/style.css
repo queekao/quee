@@ -55,12 +55,17 @@ main{
     top: 0%;
     left: 0;
     padding: 0.6rem 1rem 1rem 1rem;
-    height: 100%;
+    height: 9%;
     width: 7rem;
-    background: #fff;
+    background: transparent;
     overflow: hidden;
     transition: all 0.3s ease;
     z-index: 9999;
+  }
+  .sidebar.active{
+    width: 26rem;
+    height: 100%;
+    background: white;
   }
 }
 
@@ -80,16 +85,15 @@ main{
 .sidebar .logo_content .logo img{
  margin-right: 1rem;
 }
-@media (max-width: 450px) {
+@media (max-width: 576px) {
   .sidebar{
     position: fixed;
-    top: 0%;
-    left: 0%;
-    padding: 0;
+    top: 0;
+    left: 1%;
+    padding: 2.5rem 1rem 0rem 1rem; 
     height: 9%;
     width: 6rem;
     margin-top: 0rem;
-    overflow: hidden;
     transition: all 0.3s ease;
     z-index: 9999;
     background: transparent;
@@ -157,7 +161,8 @@ margin-top: 1.1rem;
 }
 @media (max-width: 992px) {
   .sidebar #btn{
-    top: 0px;
+    top: -18px;
+    left: 100%;
   }
 }
 .sidebar.active #btn{
@@ -297,13 +302,8 @@ overflow: hidden;
 .header{
   transition: all 0.3s;
 }
-.background-image{
-  transition: all 0.3s;
-}
+
 .header.move{
-  transform: translateX(15%);
-}
-.background-image.move{
   transform: translateX(15%);
 }
 .container {
@@ -470,6 +470,18 @@ nav .navbar-nav {
   .navbar .navbar-toggler{
     top: 14px;
     margin-top: 0rem;
+    right: 10px;
+  }
+}
+@media (max-width:992px) {
+  .navbar-nav .dropdown-menu {
+    margin-top: 0rem;
+    margin-bottom: 1rem;
+  }
+  .navbar .navbar-toggler{
+    top: 30px;
+    margin-top: 0rem;
+    right: 10px;
   }
 }
 @media (max-width:576px) {
@@ -537,6 +549,35 @@ background-color: #267cd9;
   z-index: -2;
   margin: 0;
   opacity: 0.7;
+  transition: all 0.3s; 
+}
+.background-image::after {
+  content: "";
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--blue);
+  opacity: 0.3;
+  z-index: -1;
+}
+.background-image.move{
+}
+  .background-image.move{
+  transform: translateX(15%);
+  width: 110vw;
+}
+@media (max-width: 768px) {
+  .background-image {
+ 
+  }
+  .background-image::after {
+  }
+  .background-image.move{
+    transform: translateX(15%);
+    width: 100vw;
+  }
 }
 /* .background-image::after {
   content: "";
@@ -564,17 +605,7 @@ background-color: #267cd9;
   z-index: 100;
   margin: 0;
 }
-.jumbotron::after {
-  content: "";
-  height: 100vh;
-  width: 100vw;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: var(--blue);
-  opacity: 0.3;
-  z-index: -1;
-}
+
 .artist__wall {
   z-index: 100;
   display: flex;
@@ -752,6 +783,9 @@ form .form-control:focus{
     margin-left: .5rem;
 }
 /*///////////////////// Search form///////////////////// */
+.search__form{
+  margin-bottom: 23rem;
+}
 .search__form.append{
   position: absolute;
   top: 120%;
@@ -762,13 +796,35 @@ form .form-control:focus{
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  padding: 5rem;
+  padding: 2rem;
   width: 60rem;
   font-family: "Helvetica";
   border: 1px solid #e2e2e2;
   margin: 0 auto;
   margin-bottom: 2rem;
   border-radius: 10px;
+}
+.form-inline {
+  margin-top: 1rem;
+  align-items: stretch;
+  justify-content: stretch;
+}
+.form-inline .form-control{
+  flex: 0 1 80%;
+}
+.form-inline button{
+  margin-left: 1rem;
+  flex: 0 1 18%;
+  font-size: 1.6rem;
+  border-radius: 0px;
+}
+.search__form-inner .input-group__input{
+  border: 0px;
+  box-shadow: 1px 2px 3px rgb(0 0 0 / 15%);
+  outline: none;
+  display: flex;
+  flex-direction: row;
+  flex: 0 1 33%;
 }
 .search__form-inner.animation {
   animation: moveInBottom 1s;
@@ -778,6 +834,16 @@ form .form-control:focus{
     width: 40rem;
     height: 40rem;
 }
+.form-inline .form-control{
+  flex: 0 1 75%;
+  margin-left: .5rem;
+}
+.form-inline button{
+  margin-left: 1rem;
+  flex: 0 1 20%;
+  font-size: 1.6rem;
+  border-radius: 0px;
+}
 }
 @media (max-width:576px) {
   .search__form-inner {
@@ -785,27 +851,44 @@ form .form-control:focus{
     height: 35rem;
     padding: 3rem !important;
 }
-
+  .form-inline .form-control{
+    flex: 0 1 100%;
+    margin-left: 0rem;
+}
+  .form-inline button{
+    margin-left: 0rem;
+    margin-top: 1.5rem !important;
+    flex: 0 1 100%;
+    font-size: 1.6rem;
+    border-radius: 0px;
+}
 }
 .search__form-inner h1{
-  color: var(--dark)
+  color: var(--dark);
+  margin: 2rem auto;
+  margin-bottom: 1rem;
 }
-.search__form-inner label{
-  font-size: 1.6rem;
+.search__form-inner p{
+  color: var(--gray);
+  font-size: 2.4em;
+  margin: 2rem auto;
+  /* margin-bottom: 2rem; */
 }
-.search__form-inner .input-group__input{
-  border: 0px;
-  box-shadow: 1px 2px 3px rgb(0 0 0 / 15%);
-  outline: none;
+.search__form-inner .input-group{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-.search__form-inner .input-group__input button,.dropdown-menu{
- font-size: 1.2rem;
- background-color: #E8E8E8;
+.search__form-inner .input-group-prepend{
+   flex: 0 1 33%;
+   border-radius: 4px;
+   justify-content: center;
+   align-items: center;
+   border: 0.5 solid #fefefe;
 }
-.search__form-inner .input-group__input span{
- font-size: 1.2rem;
- background-color: #E8E8E8;
+.search__form-inner .input-group-prepend button,.dropdown-menu{
+ font-size: 1.6rem;
+ border-color: #dbdbdb;
 }
 .search__form-inner .input-group__input .form-control{
   border:0.5px solid #ffffff ;
@@ -816,44 +899,23 @@ form .form-control:focus{
   border-color: transparent;
   box-shadow: 0px 5px 16px rgb(0 0 0 / 15%);
 }
-.search__form-inner .input-group-all{
-  padding: 1rem;
-  justify-content: space-between;
-}
-
-.search__form-inner .input-group__last{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
-.search__form-inner .input-date{
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-input[type="date"]{
-  padding: 0.5rem 1rem;
-  font-size: 1.2rem;
-  border:0.5px solid #C8C8C8 ;
-}
-.search__form-inner .input-group-all .btn-search{
-  align-self: flex-end;
-  width: 12rem;
-  font-size: 1.6rem;
-  margin-top: 1rem;
-}
 
 @media (max-width:768px) {
-  .search__form-inner .input-group__last{
+  .search__form-inner .input-group-prepend button,.dropdown-menu{
+    font-size: 1.4rem;
+    border-color: #dbdbdb;
+   }
+}
+@media (max-width:576px) {
+  .search__form-inner .input-group{
     display: flex;
-    flex-direction: column;
-    justify-content: stretch;
-    align-items: stretch;
+   flex-direction: column;
   }
-  .search__form-inner .input-group-all .btn-search{
-   width: 100%;
-  }
+  .search__form-inner .input-group-prepend button{
+    flex: 0 1 100%;
+    font-size: 1.6rem;
+    margin-top: 1rem;
+ }
 }
 @keyframes moveInBottom {
   0% {
