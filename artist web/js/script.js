@@ -115,13 +115,13 @@ const appendJumbotron = () => {
     landingPage.innerHTML.trim() === "" &&
     !(searchForm.innerHTML.trim() === "")
   ) {
+    // on the Search page
+    searchFormEl.remove();
+    main.prepend(parallax);
+    landingPage.insertAdjacentHTML("afterbegin", htmlJumbotron);
+    dropDownMenu.classList.remove("show");
+    header.classList.toggle("height");
   }
-  // on the Search page
-  searchFormEl.remove();
-  main.prepend(parallax);
-  landingPage.insertAdjacentHTML("afterbegin", htmlJumbotron);
-  dropDownMenu.classList.remove("show");
-  header.classList.toggle("height");
 };
 //INSERT FORM/////////
 const appendSearchForm = () => {
