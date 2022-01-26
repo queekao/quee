@@ -801,12 +801,14 @@ form .form-control:focus{
 
 .search__form-inner .input-group__input button,.dropdown-menu{
  font-size: 1.2rem;
+ background-color: #E8E8E8;
 }
 .search__form-inner .input-group__input span{
  font-size: 1.2rem;
+ background-color: #E8E8E8;
 }
 .search__form-inner .input-group__input .form-control{
-  border:0.5px solid #E4E4E4 ;
+  border:0.5px solid #ffffff ;
   outline: none;
 }
 .search__form-inner .input-group__input .form-control:focus{
