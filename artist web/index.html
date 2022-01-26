@@ -44,7 +44,10 @@
           <img src="img/logo.png" width="50" height="50" alt="logo" />
           <p>NTMOFA</p>
         </a>
-        <i class="bx bx-menu-alt-left" id="btn"></i>
+        <button class="sidebar" id="btn">
+          <i class="sidebar-icon bx bx-menu"></i>
+        </button>
+        <!-- <i class="bx bx-menu-alt-left" id="btn"></i> -->
       </div>
       <ul class="nav_list">
         <li>
@@ -154,7 +157,7 @@
                 aria-expanded="false"
                 aria-label="Toggle navigation"
               >
-                <span class="navbar-toggler-icon navbar-dark"></span>
+                <i class="navbar-icon bx bx-menu"></i>
               </button>
               <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
@@ -193,6 +196,9 @@
                   <button type="button" class="btn btn-outline-primary mt-1">
                     登入會員
                   </button>
+                  <button class="btn btn-outline-success search" type="button">
+                    搜尋
+                  </button>
                 </ul>
               </div>
             </nav>
@@ -220,7 +226,10 @@
           </div>
         </div>
       </section>
+      <!-- FORM -->
       <section class="form"></section>
+      <!-- SEARCH -->
+      <section class="search__form"></section>
     </main>
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
