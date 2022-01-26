@@ -249,7 +249,7 @@ if (screen.width > 992) {
 
 btn.onclick = function () {
   sidebar.classList.toggle("active");
-  dropDownSidebar.classList.toggle("toggle");
+  dropDownSidebar.classList.add("toggle");
   bgImg.classList.toggle("move");
   parallax.style.transition = "all 0.3s";
   //   if (sidebar.classList.contains("active")) {
