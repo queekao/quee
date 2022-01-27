@@ -3,23 +3,18 @@
   position: fixed;
   top: 0%;
   left: 0;
-  padding: 0.6rem 1rem 1rem 1rem;
-  height: 7%;
-  width: 7rem;
+  padding: 1rem;
+  height: 0%;
+  width: 0rem;
   background: #fff;
   overflow: hidden;
   transition: all 0.3s ease;
-  z-index: 9999;
+  z-index: 1;
   font-family: "Helvetica";
 }
 @media (max-width: 992px) {
   .sidebar {
-    height: 9%;
-    width: 7rem;
     background: transparent;
-    padding-bottom: 10rem;
-    padding-right: 2rem;
-    padding-left: 2rem;
   }
   .sidebar.active {
     width: 26rem;
@@ -49,12 +44,10 @@
     position: fixed;
     top: 0;
     left: 0%;
-    padding: 2.2rem 4rem 4rem 6rem;
-    height: 9%;
-    width: 6rem;
+    height: 0%;
+    width: 0rem;
     margin-top: 0rem;
     transition: all 0.3s ease;
-    z-index: 9999;
     background: transparent;
   }
   .sidebar.active {
@@ -95,11 +88,12 @@
     font-size: 2.4rem;
     font-weight: 400;
   } */
-.sidebar #btn {
+/* This Button in Navbar */
+#btn {
   position: absolute;
   color: #1e4b6c;
-  left: 80%;
-  top: -32px;
+  left: 5vw;
+  top: 17%;
   font-size: 2.4rem;
   height: 3.5rem;
   width: 4rem;
@@ -110,23 +104,66 @@
   border-radius: 4px;
   background-color: var(--blue);
   border: 1px solid var(--blue);
+  z-index: 100000;
 }
-.sidebar .sidebar-icon {
+.sidebar-icon {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
+  z-index: 100000;
 }
+#btn.moveLeft {
+  left: 16vw;
+}
+
 @media (max-width: 992px) {
-  .sidebar #btn {
-    top: -18px;
-    left: 100%;
+  #btn {
+    top: 27px;
+    left: 5vw;
+  }
+  #btn.moveLeft {
+    left: 23vw;
   }
 }
-.sidebar.active #btn {
-  left: 90%;
+@media (max-width: 768px) {
+  #btn {
+    top: 27px;
+    left: 5vw;
+  }
+  #btn.moveLeft {
+    left: 30vw;
+  }
 }
+@media (max-width: 576px) {
+  #btn {
+    top: 10px;
+    left: 8vw;
+  }
+  #btn.moveLeft {
+    left: 43vw;
+  }
+}
+@media (max-width: 450px) {
+  #btn {
+    top: 10px;
+    left: 12vw;
+  }
+  #btn.moveLeft {
+    left: 50vw;
+  }
+}
+@media (max-width: 400px) {
+  #btn {
+    top: 10px;
+    left: 12vw;
+  }
+  #btn.moveLeft {
+    left: 65vw;
+  }
+}
+/* Navbar Button Control Sidebar*/
 .sidebar ul {
   margin-top: 2rem;
 }

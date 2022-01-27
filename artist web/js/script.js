@@ -3,13 +3,13 @@ import * as variable from "./Variable.js";
 import { appendForm } from "./Form.js";
 import { appendJumbotron } from "./Jumbotron.js";
 import { appendSearchForm } from "./SearchForm.js";
-
+let sidebar = document.querySelector(".sidebar");
 console.log(window.pageXOffset);
 const parallaxScroll = () => {
   let offset = window.pageYOffset;
   variable.parallax.style.backgroundPositionY = offset * 0.7 + "px";
   console.log("scroll");
-  variable.parallax.style.transition = "none";
+  // variable.parallax.style.transition = "none";
 };
 //////////Callback///////
 variable.joinBtn.addEventListener("click", appendForm);
@@ -17,23 +17,24 @@ variable.mainItem.addEventListener("click", appendJumbotron);
 variable.searchBtn.addEventListener("click", appendSearchForm);
 window.addEventListener("scroll", parallaxScroll);
 ///////Sidebar////////////
-let btn = document.querySelector("#btn");
-let sidebar = document.querySelector(".sidebar");
+// let btn = document.querySelector("#btn");
 // let searchBtn = document.querySelector(".bx-search");
 // let toolTip = document.querySelectorAll(".tooltip");
-variable.bgImg.classList.toggle("move");
+variable.main.classList.toggle("moveRight");
 if (screen.width < 992) {
   sidebar.classList.remove("active");
 }
 if (screen.width > 992) {
-  variable.bgImg.classList.add("move");
+  variable.main.classList.add("moveRight");
 }
-
-btn.onclick = function () {
+if (screen.width < 992) variable.btn.classList.remove("moveLeft");
+variable.btn.onclick = function () {
   sidebar.classList.toggle("active");
   variable.dropDownSidebar.classList.add("toggle");
-  variable.bgImg.classList.toggle("move");
-  variable.parallax.style.transition = "all 0.3s";
+  variable.main.classList.toggle("moveRight");
+  variable.jumbotron.classList.toggle("moveRight");
+  variable.btn.classList.toggle("moveLeft");
+  // variable.parallax.style.transition = "all 0.3s";
   //   if (sidebar.classList.contains("active")) {
   //     toolTip.forEach((el) => (el.style.display = "none"));
   //   }

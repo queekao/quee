@@ -5,6 +5,7 @@ const searchForm = document.querySelector(".search__form");
 const main = document.querySelector("main");
 //header
 const bgImg = document.querySelector(".background-image");
+const jumbotron = document.querySelector(".jumbotron");
 const header = document.querySelector(".header");
 //
 const mainItem = document.querySelector(".main-item");
@@ -26,6 +27,7 @@ const btn = document.querySelector("#btn");
 const sidebar = document.querySelector(".sidebar");
 
 export {
+  jumbotron,
   landingPage,
   form,
   searchForm,

@@ -49,9 +49,7 @@
           <img src="img/logo.png" width="50" height="50" alt="logo" />
           <p>NTMOFA</p>
         </a>
-        <button class="sidebar" id="btn">
-          <i class="sidebar-icon bx bx-menu"></i>
-        </button>
+
         <!-- <i class="bx bx-menu-alt-left" id="btn"></i> -->
       </div>
       <ul class="nav_list">
@@ -146,13 +144,16 @@
         </li>
       </ul>
     </div>
-    <main>
-      <div class="background-image move"></div>
+    <main class="moveRight">
+      <div class="background-image"></div>
       <!-- NAVBAR -->
       <div class="header shadow-sm rounded">
         <div class="container">
           <div class="row">
             <nav class="navbar navbar-expand-lg navbar-light w-100">
+              <button class="sidebar moveLeft" id="btn">
+                <i class="sidebar-icon bx bx-menu"></i>
+              </button>
               <button
                 class="navbar-toggler"
                 type="button"
@@ -212,7 +213,7 @@
       </div>
       <!-- main -->
       <section class="landing-page">
-        <div class="jumbotron">
+        <div class="jumbotron moveRight">
           <div class="artist__wall">
             <h1 class="display-4 font-weight-normal">國美藏品維護保存系統</h1>
             <p class="lead font-weight-bolder">

@@ -33,6 +33,12 @@ body {
 }
 main {
   overflow: hidden;
+  transition: all 0.3s;
+}
+main.moveRight {
+  transform: translateX(15%);
+  width: 87%;
+  overflow: hidden;
 }
 
 @keyframes moveInBottom {
