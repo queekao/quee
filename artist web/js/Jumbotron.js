@@ -35,6 +35,7 @@ const appendJumbotron = () => {
     localStorage.removeItem("form");
     variable.dropDownMenu.classList.remove("show");
     variable.header.classList.toggle("height");
+    variable.main.style.overflow = "hidden";
   }
   if (
     variable.landingPage.innerHTML.trim() === "" &&
@@ -46,6 +47,7 @@ const appendJumbotron = () => {
     variable.landingPage.insertAdjacentHTML("afterbegin", htmlJumbotron);
     variable.dropDownMenu.classList.remove("show");
     variable.header.classList.toggle("height");
+    variable.main.style.overflow = "hidden";
   }
 };
 export { appendJumbotron as appendJumbotron };

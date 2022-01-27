@@ -29,6 +29,7 @@ if (screen.width > 992) {
 }
 if (screen.width < 992) variable.SidebarBtn.classList.remove("moveLeft");
 if (screen.width > 992) variable.dropDownSidebar.classList.add("toggle");
+if (screen.width < 992) variable.jumbotron.classList.remove("moveRight");
 variable.SidebarBtn.onclick = function () {
   sidebar.classList.toggle("active");
   variable.dropDownSidebar.classList.add("toggle");

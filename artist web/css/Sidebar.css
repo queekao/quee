@@ -12,6 +12,10 @@
   z-index: 1;
   font-family: "Helvetica";
 }
+.sidebar.active {
+  width: 26rem;
+  height: 100%;
+}
 @media (max-width: 991px) {
   .sidebar {
     background: transparent;
@@ -21,11 +25,6 @@
     height: 100%;
     background: white;
   }
-}
-
-.sidebar.active {
-  width: 26rem;
-  height: 100%;
 }
 .sidebar .logo_content .logo {
   color: #1e4b6c;
@@ -91,8 +90,9 @@
 #btn {
   position: absolute;
   color: #1e4b6c;
-  left: 5vw;
+  left: 0;
   top: 17%;
+  margin-left: 8rem;
   font-size: 2.4rem;
   height: 3.5rem;
   width: 4rem;
@@ -103,7 +103,7 @@
   border-radius: 4px;
   background-color: var(--blue);
   border: 1px solid var(--blue);
-  z-index: 100000;
+  z-index: 1;
 }
 .sidebar-icon {
   position: absolute;
@@ -111,63 +111,49 @@
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  z-index: 100000;
+  z-index: 1;
 }
 #btn.moveLeft {
-  left: 10vw;
+  left: 50px;
 }
 @media (max-width: 1250px) {
   #btn {
     top: 17%;
-    left: 5vw;
+    left: 0;
   }
   #btn.moveLeft {
-    left: 15vw;
+    left: 0;
+    margin-left: 16rem;
   }
 }
 @media (max-width: 991px) {
   #btn {
-    top: 27px;
-    left: 5vw;
+    top: 26px;
+    left: -4%;
   }
   #btn.moveLeft {
-    left: 23vw;
+    left: 0;
+    margin-left: 18rem;
   }
 }
 @media (max-width: 768px) {
   #btn {
-    top: 27px;
-    left: 5vw;
+    top: 26px;
+    left: -5%;
   }
   #btn.moveLeft {
-    left: 30vw;
+    left: 0;
+    margin-left: 19rem;
   }
 }
 @media (max-width: 576px) {
   #btn {
     top: 10px;
-    left: 8vw;
+    left: -5%;
   }
   #btn.moveLeft {
-    left: 43vw;
-  }
-}
-@media (max-width: 450px) {
-  #btn {
-    top: 10px;
-    left: 12vw;
-  }
-  #btn.moveLeft {
-    left: 50vw;
-  }
-}
-@media (max-width: 400px) {
-  #btn {
-    top: 10px;
-    left: 12vw;
-  }
-  #btn.moveLeft {
-    left: 65vw;
+    left: 0;
+    margin-left: 24rem;
   }
 }
 /* Navbar Button Control Sidebar*/
@@ -257,6 +243,8 @@
   text-decoration: none;
   transition: all 0.3s ease;
   border-radius: 12px;
+  border: 0px;
+  border-color: transparent;
 }
 .sidebar ul li a:hover {
   background: #dcf0fe;
@@ -278,11 +266,14 @@
   font-size: 1.6rem;
 }
 /* DropDown Animation */
-.sidebar ul .dropdown .dropdown-menu a {
-  font-size: 1.6rem;
+.sidebar ul .dropdown .dropdown-menu {
   border: 0px;
-  padding: 0rem 3rem 0rem 1rem;
-  border-color: transparent;
+  padding: 0;
+  margin-left: 2rem;
+}
+.sidebar ul .dropdown .dropdown-menu a {
+  font-size: 1.2rem;
+  padding: 0rem 2rem 0rem 1rem;
 }
 .sidebar ul .dropdown .dropdown-menu a:hover {
   background: #dcf0fe;
