@@ -11,12 +11,14 @@
   position: relative;
 }
 .form {
-  padding-top: 25rem;
-  padding-bottom: 10rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-.form.ativeSearch {
+/* .form.ativeSearch {
   padding-top: 45rem;
-}
+}  test purpose*/
 .form-background {
   background-color: var(--white);
   width: 60rem;

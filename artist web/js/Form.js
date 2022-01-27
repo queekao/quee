@@ -52,7 +52,7 @@ const appendForm = () => {
     variable.dropDownMenu.classList.remove("show");
     variable.header.classList.toggle("height");
     //search Expand
-    variable.form.classList.remove("ativeSearch");
+    // variable.form.classList.remove("ativeSearch");
   }
   if (
     variable.form.innerHTML.trim() === "" &&
@@ -64,7 +64,7 @@ const appendForm = () => {
     variable.dropDownMenu.classList.remove("show");
     variable.header.classList.toggle("height");
     //search Expand
-    variable.form.classList.remove("ativeSearch");
+    // variable.form.classList.remove("ativeSearch");
   }
 };
 export { appendForm as appendForm };

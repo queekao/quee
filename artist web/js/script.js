@@ -32,7 +32,7 @@ if (screen.width > 992) {
   variable.main.classList.add("moveRight");
   variable.dropDownSidebar.classList.add("toggle");
 }
-
+///Sidebar
 variable.SidebarBtn.onclick = function () {
   sidebar.classList.toggle("active");
   variable.dropDownSidebar.classList.add("toggle");
@@ -47,6 +47,9 @@ variable.SidebarBtn.onclick = function () {
   //     toolTip.forEach((el) => (el.style.display = "block"));
   //   }
 };
+variable.sidebarMenu.addEventListener("click", function () {
+  variable.sidebarItem.forEach((el) => el.classList.toggle("active"));
+});
 // searchBtn.onclick = function () {
 //   dropDownSidebar.classList.toggle("toggle");
 // };
@@ -54,7 +57,3 @@ variable.SidebarBtn.onclick = function () {
 variable.toggler.onclick = function () {
   variable.header.classList.toggle("height");
 };
-
-variable.sidebarMenu.addEventListener("click", function () {
-  variable.sidebarItem.forEach((el) => el.classList.toggle("active"));
-});

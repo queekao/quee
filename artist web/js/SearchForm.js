@@ -83,12 +83,12 @@ const appendSearchForm = () => {
   ) {
     jumbotron.remove();
     variable.parallax.remove();
-    variable.searchForm.classList.add("append");
+    // variable.searchForm.classList.add("append");//change the position//test
     variable.searchForm.insertAdjacentHTML("afterbegin", htmlSearch);
     variable.dropDownMenu.classList.remove("show");
     variable.header.classList.toggle("height");
     //search Expand
-    variable.form.classList.add("ativeSearch");
+    // variable.form.classList.add("ativeSearch");
   }
   if (
     variable.searchForm.innerHTML.trim() === "" &&
@@ -96,12 +96,12 @@ const appendSearchForm = () => {
   ) {
     //   On the formPage
     formElement.remove();
-    variable.searchForm.classList.add("append");
+    // variable.searchForm.classList.add("append");//change the position//test
     variable.searchForm.insertAdjacentHTML("afterbegin", htmlSearch);
     variable.dropDownMenu.classList.remove("show");
     variable.header.classList.toggle("height");
     //search Expand
-    variable.form.classList.add("ativeSearch");
+    // variable.form.classList.add("ativeSearch");
   }
 };
 export { appendSearchForm as appendSearchForm };

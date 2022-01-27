@@ -2,7 +2,9 @@
 ///INSERT JUMBOTRON
 import * as variable from "./Variable.js";
 const appendJumbotron = () => {
-  const htmlJumbotron = `<div class="jumbotron moveRight">
+  const htmlJumbotron = `<div class="jumbotron ${
+    screen.width > 992 ? variable.jumbotron.classList.add("moveRight") : ""
+  }">
   <div class="artist__wall animation">
     <h1 class="display-4 font-weight-normal">國美藏品維護保存系統</h1>
     <p class="lead font-weight-bolder">
@@ -36,7 +38,7 @@ const appendJumbotron = () => {
     variable.dropDownMenu.classList.remove("show");
     variable.header.classList.toggle("height");
     //search Expand
-    variable.form.classList.remove("ativeSearch");
+    // variable.form.classList.remove("ativeSearch");
   }
   if (
     variable.landingPage.innerHTML.trim() === "" &&
@@ -49,7 +51,7 @@ const appendJumbotron = () => {
     variable.dropDownMenu.classList.remove("show");
     variable.header.classList.toggle("height");
     //search Expand
-    variable.form.classList.remove("ativeSearch");
+    // variable.form.classList.remove("ativeSearch");
   }
 };
 export { appendJumbotron as appendJumbotron };
