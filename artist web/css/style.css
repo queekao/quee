@@ -51,16 +51,12 @@ main{
 }
 @media (max-width: 992px) {
   .sidebar{
-    position: fixed;
-    top: 0%;
-    left: 0;
-    padding: 0.6rem 1rem 1rem 1rem;
     height: 9%;
     width: 7rem;
     background: transparent;
-    overflow: hidden;
-    transition: all 0.3s ease;
-    z-index: 9999;
+    padding-bottom: 10rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
   }
   .sidebar.active{
     width: 26rem;
@@ -89,8 +85,8 @@ main{
   .sidebar{
     position: fixed;
     top: 0;
-    left: 1%;
-    padding: 2.5rem 1rem 0rem 1rem; 
+    left: 0%;
+    padding:2.2rem 4rem 4rem 6rem; 
     height: 9%;
     width: 6rem;
     margin-top: 0rem;
@@ -101,6 +97,7 @@ main{
   .sidebar.active{
     width: 26rem;
     height: 100%;
+    padding: 1rem;
     background: #fff;
   }
   .sidebar .logo_content{
