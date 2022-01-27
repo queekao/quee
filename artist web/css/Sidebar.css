@@ -12,7 +12,7 @@
   z-index: 1;
   font-family: "Helvetica";
 }
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   .sidebar {
     background: transparent;
   }
@@ -118,7 +118,7 @@
   left: 16vw;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   #btn {
     top: 27px;
     left: 5vw;
