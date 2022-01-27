@@ -15,6 +15,7 @@ const dropDownMenu = document.querySelector(".navbar-collapse");
 const parallax = document.querySelector(".background-image");
 const toggler = document.querySelector(".navbar-toggler");
 const dropDownSidebar = document.querySelector(".dropdown");
+const dropdownItem = document.querySelectorAll(".menu-item");
 // console.log(form.innerHTML);
 
 // The ELements INSERT
@@ -23,7 +24,7 @@ const dropDownSidebar = document.querySelector(".dropdown");
 // const jumbotron = document.querySelector(".jumbotron");
 
 //Sidebar
-const btn = document.querySelector("#btn");
+const SidebarBtn = document.querySelector("#btn");
 const sidebar = document.querySelector(".sidebar");
 
 export {
@@ -41,6 +42,6 @@ export {
   parallax,
   toggler,
   dropDownSidebar,
-  btn,
+  SidebarBtn,
   sidebar as variable,
 };

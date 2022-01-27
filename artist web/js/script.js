@@ -27,13 +27,14 @@ if (screen.width < 992) {
 if (screen.width > 992) {
   variable.main.classList.add("moveRight");
 }
-if (screen.width < 992) variable.btn.classList.remove("moveLeft");
-variable.btn.onclick = function () {
+if (screen.width < 992) variable.SidebarBtn.classList.remove("moveLeft");
+if (screen.width > 992) variable.dropDownSidebar.classList.add("toggle");
+variable.SidebarBtn.onclick = function () {
   sidebar.classList.toggle("active");
   variable.dropDownSidebar.classList.add("toggle");
   variable.main.classList.toggle("moveRight");
   variable.jumbotron.classList.toggle("moveRight");
-  variable.btn.classList.toggle("moveLeft");
+  variable.SidebarBtn.classList.toggle("moveLeft");
   // variable.parallax.style.transition = "all 0.3s";
   //   if (sidebar.classList.contains("active")) {
   //     toolTip.forEach((el) => (el.style.display = "none"));
