@@ -86,7 +86,7 @@
     font-size: 2.4rem;
     font-weight: 400;
   } */
-/* This Button in Navbar */
+/* This Button in Navbar👇 */
 #btn {
   position: absolute;
   color: #1e4b6c;
@@ -156,7 +156,7 @@
     margin-left: 24rem;
   }
 }
-/* Navbar Button Control Sidebar*/
+/* Navbar Button Control Sidebar 👆*/
 .sidebar ul {
   margin-top: 2rem;
 }
@@ -288,14 +288,15 @@
 .sidebar ul .dropdown .dropdown-menus a span {
   font-size: 1.4rem;
 }
-/* Effect */
-.sidebar .links_name {
-  opacity: 0;
-  pointer-events: none;
-}
-.sidebar.active .links_name {
-  opacity: 1;
-  pointer-events: auto;
+.sidebar .copyright {
+  color: #1e4b6c;
+  font-size: 1rem;
+  position: absolute;
+  bottom: 2rem;
+  left: 47%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 100%;
 }
 
 /* .dropdown-sidebar > .link:focus,
