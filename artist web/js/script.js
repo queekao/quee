@@ -21,15 +21,18 @@ window.addEventListener("scroll", parallaxScroll);
 // let searchBtn = document.querySelector(".bx-search");
 // let toolTip = document.querySelectorAll(".tooltip");
 variable.main.classList.toggle("moveRight");
+//hide the sidebar
 if (screen.width < 992) {
   sidebar.classList.remove("active");
+  variable.jumbotron.classList.remove("moveRight");
+  variable.SidebarBtn.classList.remove("moveLeft");
 }
+//push out the sidebar
 if (screen.width > 992) {
   variable.main.classList.add("moveRight");
+  variable.dropDownSidebar.classList.add("toggle");
 }
-if (screen.width < 992) variable.SidebarBtn.classList.remove("moveLeft");
-if (screen.width > 992) variable.dropDownSidebar.classList.add("toggle");
-if (screen.width < 992) variable.jumbotron.classList.remove("moveRight");
+
 variable.SidebarBtn.onclick = function () {
   sidebar.classList.toggle("active");
   variable.dropDownSidebar.classList.add("toggle");
@@ -51,3 +54,7 @@ variable.SidebarBtn.onclick = function () {
 variable.toggler.onclick = function () {
   variable.header.classList.toggle("height");
 };
+
+variable.sidebarMenu.addEventListener("click", function () {
+  variable.sidebarItem.forEach((el) => el.classList.toggle("active"));
+});

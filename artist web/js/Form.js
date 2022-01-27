@@ -51,7 +51,8 @@ const appendForm = () => {
     localStorage.setItem("form", 1);
     variable.dropDownMenu.classList.remove("show");
     variable.header.classList.toggle("height");
-    variable.main.style.overflow = "hidden";
+    //search Expand
+    variable.form.classList.remove("ativeSearch");
   }
   if (
     variable.form.innerHTML.trim() === "" &&
@@ -62,7 +63,8 @@ const appendForm = () => {
     variable.form.insertAdjacentHTML("afterbegin", htmlForm);
     variable.dropDownMenu.classList.remove("show");
     variable.header.classList.toggle("height");
-    variable.main.style.overflow = "hidden";
+    //search Expand
+    variable.form.classList.remove("ativeSearch");
   }
 };
 export { appendForm as appendForm };

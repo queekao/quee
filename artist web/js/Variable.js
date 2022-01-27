@@ -15,7 +15,6 @@ const dropDownMenu = document.querySelector(".navbar-collapse");
 const parallax = document.querySelector(".background-image");
 const toggler = document.querySelector(".navbar-toggler");
 const dropDownSidebar = document.querySelector(".dropdown");
-const dropdownItem = document.querySelectorAll(".menu-item");
 // console.log(form.innerHTML);
 
 // The ELements INSERT
@@ -26,7 +25,9 @@ const dropdownItem = document.querySelectorAll(".menu-item");
 //Sidebar
 const SidebarBtn = document.querySelector("#btn");
 const sidebar = document.querySelector(".sidebar");
-
+///dropdown
+const sidebarMenu = document.querySelector(".dropdown-sidebar");
+const sidebarItem = document.querySelectorAll(".menu-item");
 export {
   jumbotron,
   landingPage,
@@ -43,5 +44,8 @@ export {
   toggler,
   dropDownSidebar,
   SidebarBtn,
-  sidebar as variable,
+  sidebar,
+  sidebarMenu,
+  sidebarItem,
+  SidebarBtn as variable,
 };

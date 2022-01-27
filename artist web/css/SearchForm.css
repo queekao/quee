@@ -4,7 +4,7 @@
 }
 .search__form.append {
   position: absolute;
-  top: 120%;
+  top: 70%;
   left: 50%;
   transform: translate(-50%, -50%);
 }

@@ -87,7 +87,8 @@ const appendSearchForm = () => {
     variable.searchForm.insertAdjacentHTML("afterbegin", htmlSearch);
     variable.dropDownMenu.classList.remove("show");
     variable.header.classList.toggle("height");
-    variable.main.style.overflow = "visible";
+    //search Expand
+    variable.form.classList.add("ativeSearch");
   }
   if (
     variable.searchForm.innerHTML.trim() === "" &&
@@ -99,7 +100,8 @@ const appendSearchForm = () => {
     variable.searchForm.insertAdjacentHTML("afterbegin", htmlSearch);
     variable.dropDownMenu.classList.remove("show");
     variable.header.classList.toggle("height");
-    variable.main.style.overflow = "visible";
+    //search Expand
+    variable.form.classList.add("ativeSearch");
   }
 };
 export { appendSearchForm as appendSearchForm };
