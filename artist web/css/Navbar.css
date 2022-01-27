@@ -101,6 +101,7 @@
     nav .navbar-nav{
       justify-content: flex-start;
       align-items: flex-start;
+      padding-left: 1rem;
     }
   }
   @media (min-width: 991px) {
