@@ -1,0 +1,143 @@
+.landing-page {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0%;
+}
+/*////////// background-image///////// */
+.background-image {
+  background-color: var(--blue);
+  border-radius: 0;
+  height: 100vh;
+  width: 100vw;
+  background-image: url(../img/background.jpg);
+  background-position: 83%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: -2;
+  margin: 0;
+  opacity: 0.7;
+  transition: all 0.3s;
+}
+.background-image::after {
+  content: "";
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--blue);
+  opacity: 0.3;
+  z-index: -1;
+}
+.background-image.move {
+}
+.background-image.move {
+  transform: translateX(15%);
+  width: 110vw;
+}
+@media (max-width: 768px) {
+  .background-image {
+  }
+  .background-image::after {
+  }
+  .background-image.move {
+    transform: translateX(15%);
+    width: 100vw;
+  }
+}
+/* .background-image::after {
+    content: "";
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--blue);
+    opacity: 0.2;
+    z-index: -2;
+  } */
+/*///////////////////// JUMBOTRON///////////////////// */
+.jumbotron {
+  background-color: transparent;
+  border-radius: 0;
+  height: 100vh;
+  width: 100vw;
+  /* background-image: url(../img/background.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  margin: 0;
+}
+
+.artist__wall {
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.jumbotron a {
+  background-color: #267cd9;
+  border: #267cd9;
+}
+.jumbotron a:hover {
+  background-color: #1f63ad;
+  border: #1f63ad;
+}
+
+@media (max-width: 576px) {
+  .artist__wall {
+    width: 30rem;
+  }
+  .artist__wall::after {
+    width: 30rem;
+  }
+}
+.artist__wall.animation {
+  animation: moveInBottomWall 1s;
+}
+.artist__wall::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0.9;
+  border-radius: 4px;
+}
+.artist__wall a {
+  align-self: center;
+  border-radius: 0;
+  width: 12rem;
+  font-size: 1.6rem;
+}
+.artist__wall h1 {
+  font-weight: 500 !important;
+}
+.artist__wall a:hover {
+  border-color: transparent;
+}
+.lead {
+  margin-top: 1.5rem;
+}
+.artist__wall p {
+  font-size: 1.6rem;
+}
+.context {
+  margin-bottom: 2rem;
+}
