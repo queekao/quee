@@ -274,7 +274,7 @@
   font-size: 1.4rem;
   opacity: 0;
   overflow: hidden;
-  transform: translateY(-250%);
+  transform: translateY(-100%);
 }
 .sidebar ul .dropdown .dropdown-menus a.active {
   font-size: 1.4rem;
