@@ -21,10 +21,10 @@ window.addEventListener("scroll", parallaxScroll);
 // let searchBtn = document.querySelector(".bx-search");
 // let toolTip = document.querySelectorAll(".tooltip");
 variable.main.classList.toggle("moveRight");
-//Hde the sidebar
+//Hide the sidebar
 if (screen.width < 992) {
   sidebar.classList.remove("active");
-  variable.jumbotron.classList.remove("moveRight");
+  variable.landingPage.classList.remove("moveRight");
   variable.SidebarBtn.classList.remove("moveLeft");
 }
 //push out the sidebar
@@ -35,9 +35,15 @@ if (screen.width > 992) {
 ///Sidebar
 variable.SidebarBtn.onclick = function () {
   sidebar.classList.toggle("active");
+  // if (!sidebar.classList.contains("active")) {
+  //   variable.landingPage.classList.remove("moveRight");
+  // }
+  // if (sidebar.classList.contains("active")) {
+  //   variable.landingPage.classList.add("moveRight");
+  // }
   variable.dropDownSidebar.classList.add("toggle");
   variable.main.classList.toggle("moveRight");
-  variable.jumbotron.classList.toggle("moveRight");
+  variable.landingPage.classList.toggle("moveRight");
   variable.SidebarBtn.classList.toggle("moveLeft");
   // variable.parallax.style.transition = "all 0.3s";
   //   if (sidebar.classList.contains("active")) {

@@ -2,10 +2,32 @@
   height: 100vh;
   width: 100vw;
   position: absolute;
-  top: 0;
+  top: 0%;
   left: 0%;
 }
-/*////////// background-image///////// */
+.landing-page.moveRight {
+  transform: translateX(-4%);
+}
+@media (max-width: 1300px) {
+  .landing-page.moveRight {
+    transform: translateX(-3%);
+  }
+}
+@media (max-width: 1124px) {
+  .landing-page.moveRight {
+    transform: translateX(0%);
+  }
+}
+@media (max-width: 992px) {
+  .landing-page.moveRight {
+    transform: translateX(2%);
+  }
+}
+@media (max-width: 768px) {
+  .landing-page.moveRight {
+    transform: translateX(5%);
+  }
+}
 .background-image {
   background-color: var(--blue);
   border-radius: 0;
@@ -74,7 +96,7 @@
   left: 0;
   margin: 0;
 }
-.jumbotron.moveRight {
+/* .jumbotron.moveRight {
   transform: translateX(-4%);
 }
 @media (max-width: 1300px) {
@@ -96,7 +118,7 @@
   .jumbotron.moveRight {
     transform: translateX(5%);
   }
-}
+} */
 .artist__wall {
   display: flex;
   flex-direction: column;
