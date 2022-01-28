@@ -3,7 +3,9 @@
 import * as variable from "./Variable.js";
 const appendJumbotron = () => {
   const htmlJumbotron = `<div class="jumbotron ${
-    screen.width > 992 ? "moveRight" : ""
+    screen.width > 992 && variable.sidebar.classList.contains("active")
+      ? "moveRight"
+      : ""
   }">
   <div class="artist__wall animation">
     <h1 class="display-4 font-weight-normal">國美藏品維護保存系統</h1>

@@ -21,7 +21,7 @@ window.addEventListener("scroll", parallaxScroll);
 // let searchBtn = document.querySelector(".bx-search");
 // let toolTip = document.querySelectorAll(".tooltip");
 variable.main.classList.toggle("moveRight");
-//hide the sidebar
+//Hde the sidebar
 if (screen.width < 992) {
   sidebar.classList.remove("active");
   variable.jumbotron.classList.remove("moveRight");
