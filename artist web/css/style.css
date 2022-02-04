@@ -1,0 +1,68 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+:root {
+  --blue: #267cd9;
+}
+* {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+@media (max-width: 768px) {
+  html {
+    box-sizing: border-box;
+    font-size: 57.5%;
+  }
+}
+@media (max-width: 576px) {
+  html {
+    box-sizing: border-box;
+    font-size: 52.5%;
+  }
+}
+body {
+  position: relative;
+  font-family: "serif";
+}
+main {
+  overflow: hidden;
+  transition: all 0.3s;
+  height: 100vh;
+  margin-bottom: 20rem;
+}
+main.moveRight {
+  transform: translateX(15%);
+  width: 87%;
+  overflow: hidden;
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(10rem);
+  }
+  80% {
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes moveInBottomWall {
+  0% {
+    opacity: 0;
+    transform: translateY(5rem);
+    transform: translateX(-50%);
+  }
+  80% {
+  }
+  100% {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,113 @@
+/*////////////////////// FORM /////////////////////*/
+.form > * {
+  font-size: 2rem;
+  font-family: "Helvetica";
+}
+.form-check-label {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+.form-check-input {
+  position: relative;
+}
+.form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* .form.ativeSearch {
+  padding-top: 45rem;
+}  test purpose*/
+.form-background {
+  background-color: var(--white);
+  width: 60rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  padding: 6rem !important;
+  /* box-shadow: -12px -12px 24px rgba(205, 205, 205, 0.20), 12px 12px 24px rgba(0, 0, 0, 0.1), inset -6px -4px 12px rgba(0, 0, 0, 0.12), inset 4px 1px 8px rgba(0, 0, 0, 0.05); */
+  /* box-shadow: -24px -24px 48px rgba(205, 205, 205, 0.20), 24px 24px 48px rgba(0, 0, 0, 0.1), inset -12px -8px 24px rgba(0, 0, 0, 0.12), inset 8px 2px 16px rgba(0, 0, 0, 0.05); */
+  border-radius: 10px !important;
+  /* box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1) ; */
+  border: 1px solid #e2e2e2;
+}
+@media (max-width: 768px) {
+  .form-background {
+    width: 40rem;
+    height: 40rem;
+  }
+}
+@media (max-width: 576px) {
+  .form-background {
+    width: 30rem;
+    height: 35rem;
+    padding: 3rem !important;
+  }
+}
+.form-element.animation {
+  animation: moveInBottom 1s;
+}
+form {
+  background-color: var(--white);
+}
+.form-element {
+}
+form .form-control {
+  border: 0px;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.15);
+}
+form .form-control:focus {
+  border-color: transparent;
+  box-shadow: 0px 5px 16px rgba(0, 0, 0, 0.15);
+}
+.form-check {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin-bottom: 0;
+}
+.form-check input {
+  margin-right: 0.5rem;
+  justify-self: center;
+  align-self: center;
+}
+.form-check label {
+  justify-self: center;
+  align-self: center;
+  margin-bottom: 0;
+  margin-top: 0.5rem;
+  color: #8599a8;
+}
+.form-check small {
+  align-self: flex-start;
+  margin-right: auto;
+  margin-top: 0.3rem;
+}
+.hidden {
+  opacity: 1;
+  visibility: hidden;
+  display: none;
+}
+
+.form button {
+  font-size: 1.6rem;
+  border-radius: 0px;
+  background-color: var(--blue);
+  margin-top: 1rem;
+  box-shadow: 0px 2px 2px rgba(38, 124, 217, 0.3),
+    0px 10px 36px rgba(38, 124, 217, 0.3);
+}
+.form button:hover {
+  background-color: #1f63ad;
+}
+.form-control {
+  font-size: 1.6rem;
+}
+.form-text {
+  font-size: 1.2rem;
+  margin-left: 0.5rem;
+}
