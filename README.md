@@ -1,3 +1,3 @@
 # quee
-This is a freelancer job for artist web development!!
-Build up with Boostrap 4.3.1 and boxicon 2.1.1
+This is a artist website which I used boostrap 4.3.1 and boxicon to build it. 
+3 pages , one is landing page and sign in page also searched page
